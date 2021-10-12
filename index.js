@@ -1,10 +1,5 @@
-let a = 'red';
-let b = 'blue';
+function getMax (x, y) {
+    return x > y ? x : y;
+}
 
-let c = a;
-a = b;
-b = c;
-
-
-console.log(a);
-console.log(b);
+console.log(getMax(20,9));
