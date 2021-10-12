@@ -1,5 +1,5 @@
-function getMax (x, y) {
-    return x > y ? x : y;
+const isLandscape = (width, height) => {
+    return (width > height);
 }
-
-console.log(getMax(20,9));
+let photo = isLandscape(8,11);
+console.log(photo);
