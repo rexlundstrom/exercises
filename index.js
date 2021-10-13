@@ -7,7 +7,13 @@ const movie = {
 }
 
 function showProperties(obj) {
-    let output = 'title ' + obj.title + '\n' + 'director ' + obj.director;
-    return output;
+    for (let key in obj) {
+        if (typeof obj[key] === 'string')
+        console.log(key + ': ' + obj[key]);
+    }
 }
-console.log(showProperties(movie));
+showProperties(movie);
+
+
+// let output = 'title ' + obj.title + '\n' + 'director ' + obj.director;
+//     return output;
