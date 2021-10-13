@@ -1,11 +1,9 @@
-const fizzBuzz = (num) => {
-    if (typeof(num) !== 'number') return 'Not a number';
-    else if (num % 3 === 0 && num % 5 === 0) return 'FizzBuzz';
-    else if (num % 3 === 0) return 'Fizz';
-    else if (num % 5 === 0) return 'Buzz';
-    else return num;
+const checkSpeed = speed => {
+    let speedLimit = 70;
+    let points = Math.floor((speed - speedLimit) / 5);
+    if (points <= 0) return 'OK';
+    else if (points > 0 && points < 12) return points;
+    else return 'License suspended';
 }
 
-let number = console.log(fizzBuzz('cows'));
-
-number;
+console.log(checkSpeed(140));
