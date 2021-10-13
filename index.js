@@ -1,10 +1,13 @@
-function countTruthy(array) {
-    let counter = 0;
-    for(let value of array) {
-        if(value)
-            counter++;
-        }
-    return counter;
+const movie = {
+    title: 'goo and the boo',
+    releaseYear: 2004,
+    audienceRating: 9.2,
+    rottenTomatoesRating: 0.3,
+    director: 'Sam'
 }
-const testArray = [3, 4, 'fred', true, null, 'tacos', '', 0, 70]
-console.log(countTruthy(testArray));
+
+function showProperties(obj) {
+    let output = 'title ' + obj.title + '\n' + 'director ' + obj.director;
+    return output;
+}
+console.log(showProperties(movie));
