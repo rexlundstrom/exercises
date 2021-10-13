@@ -1,9 +1,12 @@
-const checkSpeed = speed => {
-    let speedLimit = 70;
-    let points = Math.floor((speed - speedLimit) / 5);
-    if (points <= 0) return 'OK';
-    else if (points > 0 && points < 12) return points;
-    else return 'License suspended';
+const showNumbers = limit => {
+    for(let i = 0; i <= limit; i++){
+        if(i % 2 === 0) {
+            console.log(i + ' "EVEN"')
+        } 
+        else {
+            console.log(i + ' "ODD"')
+        }
+    }
 }
 
-console.log(checkSpeed(140));
+showNumbers(17);
