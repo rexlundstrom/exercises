@@ -1,19 +1,11 @@
-const movie = {
-    title: 'goo and the boo',
-    releaseYear: 2004,
-    audienceRating: 9.2,
-    rottenTomatoesRating: 0.3,
-    director: 'Sam'
+console.log(funSum(5));
+
+function funSum(limit) {
+    let counter = 0;
+
+    for(let i = 0; i <= limit; i++)
+        if(i % 3 === 0 || i % 5 === 0)
+            counter = counter + i;
+
+    return counter;
 }
-
-function showProperties(obj) {
-    for (let key in obj) {
-        if (typeof obj[key] === 'string')
-        console.log(key + ': ' + obj[key]);
-    }
-}
-showProperties(movie);
-
-
-// let output = 'title ' + obj.title + '\n' + 'director ' + obj.director;
-//     return output;
