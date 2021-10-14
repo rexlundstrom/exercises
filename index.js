@@ -1,12 +1,17 @@
 
-showStars(10);
+showPrimes(100);
 
-function showStars(rows) {
-    let stars = '';
-    for(let i = 0; i < rows; i++){
-        stars += '*'
-        console.log(stars);
+function showPrimes(limit) {
+    for(let i = 2; i <= limit; i++){
+
+        let isPrime = true;
+        for(let j = 2; j < i; j++) {
+            if (i % j === 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        if (isPrime) console.log(i);
     }
-    
 }
 
